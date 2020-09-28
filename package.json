@@ -1,0 +1,23 @@
+{
+  "name": "nginx-nodejs-aws",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayush5588/nginx-nodejs-aws.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayush5588/nginx-nodejs-aws/issues"
+  },
+  "homepage": "https://github.com/ayush5588/nginx-nodejs-aws#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
