@@ -7,8 +7,12 @@ app.get('/',(req,res)=>{
     res.send('Hello Everyone');
 });
 
+
 app.get('/port',(req,res)=>{
     res.json({port: req.headers.host});
+
+app.get('/about',(req,res)=>{
+    res.send('Ayush Sinha');
 });
 
 app.listen(5000,(e)=>{
