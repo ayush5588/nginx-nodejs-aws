@@ -1,0 +1,28 @@
+0. The following steps to be done inside the instance terminal. 
+	-> To access the terminal in your local ubuntu terminal:
+		-> sudo ssh -v -i <your-security.pem file name> ubuntu@<AWS instance publicIP address>
+
+1. We will pull the docker image from the ayush5588 using command (if the image is not present in the local machine)
+	-> If 1st time accessing the instance terminal, then need to install the docker. See the following link to see the steps:
+		-> https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
+	-> sudo docker login
+	-> sudo docker pull ayush5588/nginx-node-practice   # This command can also be found on the image page on docker hub
+
+2. Make sure that the image has been pulled. 
+	-> sudo docker images
+
+3.  Then we will run 4 instances (containers) of the pulled image. 
+	-> sudo docker run -d --name <give name to the container> -p 2222:5000 <We will be exposing the container 5000 port as 2222> ayush5588/nginx-node-practice:latest
+	-> Repeat the above step 3 more times with replacing 2222 by 3333 and 4444 and 5555.
+
+4. Install the nginx in the ubuntu if not installed.
+
+5. Copy the nginx-conf.txt file to /etc/nginx/nginx.conf
+
+6. Check the syntax of the nginx.conf with -> sudo nginx -t. (Testing to be done in the /etc/nginx directory)
+
+7. Run the nginx.conf file.
+	-> sudo nginx -s reload.
+	-> The step 6 and 7 need to be always executed when there is any change in the nginx.conf file.
+
+8. If using aws, then get the public ip address of the ec2 instance that you are running. Then paste that in the browser.
