@@ -1,6 +1,6 @@
 0. The following steps to be done inside the instance terminal. 
 	-> To access the terminal in your local ubuntu terminal:
-		-> sudo ssh -v -i <your-security.pem file name> ubuntu@<AWS instance publicIP address>
+		-> sudo ssh -v -i your-security.pem file_name ubuntu@AWS instance publicIP address
 
 1. We will pull the docker image from the ayush5588 using command (if the image is not present in the local machine)
 	-> If 1st time accessing the instance terminal, then need to install the docker. See the following link to see the steps:
